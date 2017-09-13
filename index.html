@@ -7,7 +7,61 @@
   <title>QRcode</title>
 </head>
 <body>
+  <div id="qrcodeDefault"></div>
+  <div id="qrcodeTable"></div>
+  <div id="qrcodeCanvas"></div>
+  <div id="qrcodeSVG"></div>
 
-<script src="dist/"></script>
+<script src='dist/arale-qrcode/3.0.5/index.js'></script>
+<script>
+
+var icon = 'https://t.alipayobjects.com/images/rmsweb/T1ZsxhXdxbXXXXXXXX.png';
+var url = 'https://qr.alipay.com/tsx06052sckeitijl08oyd7?_s=web-other';
+// var url = 'https://ds.alipay.com/?from=mobilecodec&scheme=alipays%3A%2F%2Fplatformapi%2Fstartapp%3FsaId%3D10000007%26clientVersion%3D3.7.0.0718%26qrcode%3Dhttps%253A%252F%252Fqr.alipay.com%252Ftsx06052sckeitijl08oyd7%253F_s%253Dweb-other';
+// var url = 'alipays://platformapi/startapp?saId=10000007&qrcode=https%3A%2F%2Fqr.alipay.com%2Ftsx06052sckeitijl08oyd7';
+
+var qrcode = AraleQRCode;
+var qrDefault = new qrcode({
+  text: url,
+});
+document.getElementById('qrcodeDefault').appendChild(qrDefault);
+
+// 调用table画二维码
+var qrTable = new qrcode({
+  render: 'table',
+  correctLevel: 0,
+  pdground: '#00aaee',
+  text: url,
+  size: 200,
+  image : icon,
+});
+document.getElementById('qrcodeTable').appendChild(qrTable);
+
+// 调用canvas画二维码
+var qrCanvas = new qrcode({
+  render: 'canvas',
+  correctLevel: 0,
+  text: url,
+  size: 200,
+  // background: '#eeeeee',
+  // foreground: '#667766',
+  pdground: '#00aaee',
+  image : icon,
+  imageSize : 100
+});
+document.getElementById('qrcodeCanvas').appendChild(qrCanvas);
+
+// 调用svg画二维码
+var qrSvg = new qrcode({
+    correctLevel: 0,
+    render: 'svg',
+    text: url,
+    size: 200,
+    pdground: '#00aaee',
+    image : icon,
+    imageSize: 30
+  });
+  document.getElementById('qrcodeSVG').appendChild(qrSvg);
+</script>
 </body>
 </html>
