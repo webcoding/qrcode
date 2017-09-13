@@ -107,7 +107,7 @@ var qrcode = function(opt) {
     return this.createDefault(qrCodeAlg);
 };
 
-extend(qrcode.prototype,{
+extend(qrcode.prototype, {
     // default create  canvas -> svg -> table
     createDefault (qrCodeAlg) {
         var canvas = document.createElement('canvas');

@@ -12,7 +12,7 @@
 ````javascript
 var qrcode = require('../src/index.js');
 var qrnode = new qrcode({
-	text: 'http://www.alipay.com/'
+  text: 'http://www.alipay.com/'
 });
 document.getElementById('qrcodeDefault').appendChild(qrnode);
 ````
@@ -26,12 +26,12 @@ document.getElementById('qrcodeDefault').appendChild(qrnode);
 ````javascript
 var qrcode = require('../src/index.js');
 var qrnode = new qrcode({
-	render: 'table',
-	correctLevel: 0,
-	pdground: '#00aaee',
-	text: 'http://www.alipay.com/',
-	size: 100,
-	image : 'https://t.alipayobjects.com/images/rmsweb/T1ZsxhXdxbXXXXXXXX.png'
+  render: 'table',
+  correctLevel: 0,
+  pdground: '#00aaee',
+  text: 'http://www.alipay.com/',
+  size: 100,
+  image : 'https://t.alipayobjects.com/images/rmsweb/T1ZsxhXdxbXXXXXXXX.png'
 });
 document.getElementById('qrcodeTable').appendChild(qrnode);
 ````
@@ -45,15 +45,15 @@ document.getElementById('qrcodeTable').appendChild(qrnode);
 ````javascript
 var qrcode = require('../src/index.js');
 var qrnode = new qrcode({
-	render: 'canvas',
-	correctLevel: 0,
-	text: 'http://www.alipay.com/',
-	size: 300,
-	background: '#eeeeee',
-	foreground: '#667766',
-	pdground: '#00aaee',
-	image : 'https://t.alipayobjects.com/images/rmsweb/T1ZsxhXdxbXXXXXXXX.png',
-	imageSize : 100
+  render: 'canvas',
+  correctLevel: 0,
+  text: 'http://www.alipay.com/',
+  size: 300,
+  background: '#eeeeee',
+  foreground: '#667766',
+  pdground: '#00aaee',
+  image : 'https://t.alipayobjects.com/images/rmsweb/T1ZsxhXdxbXXXXXXXX.png',
+  imageSize : 100
 });
 document.getElementById('qrcodeCanvas').appendChild(qrnode);
 ````
@@ -67,13 +67,13 @@ document.getElementById('qrcodeCanvas').appendChild(qrnode);
 ````javascript
 var qrcode = require('../src/index.js');
 var qrnode = new qrcode({
-	correctLevel: 0,
-	render: 'svg',
-	text: 'http://www.alipay.com/',
-	size: 200,
-	pdground: '#00aaee',
-	image : 'https://t.alipayobjects.com/images/rmsweb/T1ZsxhXdxbXXXXXXXX.png',
-	imageSize:30
+  correctLevel: 0,
+  render: 'svg',
+  text: 'http://www.alipay.com/',
+  size: 200,
+  pdground: '#00aaee',
+  image : 'https://t.alipayobjects.com/images/rmsweb/T1ZsxhXdxbXXXXXXXX.png',
+  imageSize:30
 });
 document.getElementById('qrcodeSVG').appendChild(qrnode);
 ````
